@@ -1,8 +1,12 @@
 # musicplayer_1_flutter
 
-A music player Flutter project.
+an `Offline Music Player` Flutter project.
 
 ## Getting Started
+
+- State Management (Bloc)
+- Clean Architecture
+
 
 This project is a starting point for a Flutter application.
 
