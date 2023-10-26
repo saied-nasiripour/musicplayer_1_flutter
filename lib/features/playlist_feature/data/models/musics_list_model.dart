@@ -1,4 +1,4 @@
-import 'package:musicplayer_1_flutter/features/feature_player/data/models/music_model.dart';
+import 'package:musicplayer_1_flutter/features/player_feature/data/models/music_model.dart';
 
 List<MusicModel> musicsListModel = [
   MusicModel(
