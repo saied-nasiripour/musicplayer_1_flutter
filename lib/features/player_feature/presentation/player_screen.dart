@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musicplayer_1_flutter/core/constants/color_palette.dart';
 import 'package:musicplayer_1_flutter/features/player_feature/presentation/widgets/neumorphism_button.dart';
+import 'package:musicplayer_1_flutter/features/playlist_feature/data/models/musics_list_model.dart';
 
 class PlayerScreen extends StatefulWidget {
   const PlayerScreen({Key? key}) : super(key: key);
@@ -10,8 +11,10 @@ class PlayerScreen extends StatefulWidget {
 }
 
 class _PlayerScreenState extends State<PlayerScreen> {
+  int _currentItemPlaying = 0;
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ColorPalette.bgColor,
       body: SafeArea(
@@ -45,9 +48,11 @@ class _PlayerScreenState extends State<PlayerScreen> {
                   ),
                 ],
               ),
-              const NeumorphismButton(
-                size: 60,
-                imageUrl: "assets/images/1.jpg",
+              NeumorphismButton(
+                size: size.width * 0.8,
+                distance: 20,
+                imageUrl: musicsListModel[_currentItemPlaying].imageUrl,
+                padding: 10,
               ),
             ],
           ),

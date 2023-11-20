@@ -9,6 +9,7 @@ class NeumorphismButton extends StatelessWidget {
   final double distance;
   final List<Color>? colors;
   final String? imageUrl;
+  final double? padding;
 
   const NeumorphismButton({
     super.key,
@@ -19,6 +20,7 @@ class NeumorphismButton extends StatelessWidget {
     this.distance = 10,
     this.colors,
     this.imageUrl,
+    this.padding,
   });
 
   @override
@@ -26,7 +28,7 @@ class NeumorphismButton extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      padding: const EdgeInsets.all(3),
+      padding: EdgeInsets.all(padding ?? 3),
       clipBehavior: Clip.antiAliasWithSaveLayer,
       decoration: BoxDecoration(
           /*color: Colors.black,*/
